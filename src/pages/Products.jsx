@@ -1,23 +1,21 @@
-import React, { useEffect } from 'react'
-import { useDispatch, useSelector } from 'react-redux'
-import { fetchProducts } from '../features/products/productSlice';
-import { addproduct } from '../features/cart/cartSlice';
+import React, { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { fetchProducts } from "../features/products/productSlice";
+import { addproduct } from "../features/cart/cartSlice";
 
-const DisplayProducts = () => {
+const Products = () => {
+  const dispatch = useDispatch();
+  const { isloading, products } = useSelector((store) => store.products);
+  const { cart } = useSelector((store) => store.cart);
 
-    const dispatch = useDispatch();
-    const {isloading, products,} = useSelector(store => store.products);
-    const { cart } = useSelector(store => store.cart)
-    
-
-    useEffect(( ) => {
-        dispatch(fetchProducts())
-    }, [])
+  useEffect(() => {
+    dispatch(fetchProducts());
+  }, []);
   return (
     <div className="container bg-white p-5">
-        <div className='mb-5'>
-            <h2>All Products</h2>
-        </div>
+      <div className="mb-5">
+        <h2>All Products</h2>
+      </div>
       <div className="row g-4">
         {products.map((product) => {
           return (
@@ -40,7 +38,12 @@ const DisplayProducts = () => {
                     ${product.price}
                   </p>
 
-                  <button className="btn btn-dark mt-auto" onClick={() => {dispatch(addproduct(product))}}>
+                  <button
+                    className="btn btn-dark mt-auto"
+                    onClick={() => {
+                      dispatch(addproduct(product));
+                    }}
+                  >
                     <i className="ri-shopping-bag-2-line me-2"></i>
                     Add to Cart
                   </button>
@@ -48,10 +51,10 @@ const DisplayProducts = () => {
               </div>
             </div>
           );
-            })}
+        })}
       </div>
     </div>
   );
-}
+};
 
-export default DisplayProducts
+export default Products;

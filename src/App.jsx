@@ -3,9 +3,10 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Home from './pages/Home'
 import Header from './components/Header'
 import Footer from './components/Footer'
-import DisplayProducts from './pages/displayProducts'
 import { ToastContainer } from 'react-toastify'
 import Cart from './pages/Cart'
+import Products from './pages/Products'
+
 
 const App = () => {
   return (
@@ -15,7 +16,7 @@ const App = () => {
         <ToastContainer />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/products" element={<DisplayProducts />} />
+          <Route path="/products" element={<Products/>} />
           <Route path='/cart' element={<Cart />} />
         </Routes>
         <Footer />
