@@ -2,7 +2,6 @@ import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { fetchProducts } from '../features/products/productSlice';
 import { addproduct } from '../features/cart/cartSlice';
-import store from '../app/store';
 
 const DisplayProducts = () => {
 
