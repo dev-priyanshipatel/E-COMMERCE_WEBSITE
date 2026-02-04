@@ -110,7 +110,7 @@ a {
 /* footer style  */
 
 .footer-div {
-    background-image: url(../photos/bg-footer.webp);
+    background-image: url(/images/bg-footer.webp);
     height: 100%;
     width: 100%;
     color: #8e8e8e;
