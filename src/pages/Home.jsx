@@ -4,48 +4,24 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 
     const Home = () => {
       return (
-        <div>
-          <div className="">
-            <div className="static-hero d-none">
-              <div className="position-relative">
-                <img
-                  className="img-fluid"
-                  src="/images/slide-img-1.webp"
-                  alt="Hero Image"
-                />
-                <div className="container">
-                  <div className="slide-text">
-                    <h4 className="fw-bold m-0">NEW ARRIVALS</h4>
-                    <span className="title-1">NEW STYLE</span>
-                    <br />
-                    <span className="slide-1-title-2">htmlFor LAMP</span>
-                    <p className="fs-5 slide-1-para">
-                      Elegant modern lamp that adds warm ambient lighting to any
-                      space.
-                    </p>
-                    <a href="./shop.html" className="btn shop-btn">
-                      SHOP NOW
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-
+        <div className="">
+          <div className="hero-section ">
             <Swiper
               modules={[Navigation, Autoplay]}
               navigation
-              autoplay={{ delay: 3000 }}
+              // autoplay={{ delay: 3000 }}
               loop={true}
               className="swiper"
             >
-              
               <SwiperSlide>
-                <div className="position-relative">
-                  <img
-                    className="img-fluid lamp-img"
-                    src="/images/slide-img-1.webp"
-                    alt="img"
-                  />
+                <div className="position-relative h-100">
+                  <div className='img-wrapper'> 
+                    <img
+                      className=" lamp-img w-100 h-100"
+                      src="/images/slide-img-1.webp"
+                      alt="img"
+                    />
+                  </div>
                   <div className="container">
                     <div className="slide-text">
                       <h4 className="fw-bold m-0">NEW ARRIVALS</h4>
@@ -64,19 +40,20 @@ import { Swiper, SwiperSlide } from 'swiper/react';
                 </div>
               </SwiperSlide>
 
-              
               <SwiperSlide>
-                <div className="position-relative">
-                  <img
-                    className="img-fluid"
-                    src="/images/slide-img-2.webp"
-                    alt="img"
-                  />
+                <div className="position-relative h-100">
+                  <div className="img-wrapper">
+                    <img
+                      className="w-100 h-100"
+                      src="/images/slide-img-2.webp"
+                      alt="img"
+                    />
+                  </div>
                   <div className="container">
                     <div className="slide-chair-text text-center">
                       <h4 className="fw-bold m-0">TRENDING PRODUCTS</h4>
                       <span className="chair-title-1">WOODEN CHAIR</span>
-                      <p className="fs-5 mt-2">
+                      <p className="fs-5 mt-2 slide-2-para">
                         Upgrade your space with this sleek and cozy modern
                         chair.
                       </p>
@@ -91,7 +68,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
           </div>
           <div className="container py-4">
             <div className="row g-3 g-sm-4">
-              <div className="col-md-4 col-12">
+              <div className="col-lg-4 col-12">
                 <div className="img-container">
                   <a href="./shop.html">
                     <img
@@ -102,7 +79,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
                   </a>
                 </div>
               </div>
-              <div className="col-md-4 col-12">
+              <div className="col-lg-4 col-12">
                 <a href="./shop.html">
                   <img
                     src="/images/hero-img-3.avif"
@@ -111,7 +88,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
                   />
                 </a>
               </div>
-              <div className="col-md-4 col-12">
+              <div className="col-lg-4 col-12">
                 <a href="./shop.html">
                   <img
                     src="/images/hero-img-1.jpg"
@@ -144,7 +121,6 @@ import { Swiper, SwiperSlide } from 'swiper/react';
               voluptates error sit quod inventore.
             </p>
           </div>
-          
         </div>
       );
     }
