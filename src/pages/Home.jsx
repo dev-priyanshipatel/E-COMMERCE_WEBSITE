@@ -9,7 +9,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
             <Swiper
               modules={[Navigation, Autoplay]}
               navigation
-              // autoplay={{ delay: 3000 }}
+              autoplay={{ delay: 3000 }}
               loop={true}
               className="swiper"
             >

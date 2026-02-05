@@ -185,6 +185,12 @@ a {
     background-color: #79b6c8;
 }
 
+.pro-img {
+    min-width: 90px;
+    height: auto;
+    display: block;
+}
+
 @media (max-width: 992px) {
 
     .slide-text {
@@ -211,6 +217,20 @@ a {
     .slide-2-para {
         font-size: 16px;
         max-width: 400px;
+    }
+}
+
+@media (max-width: 768px) {
+    table td:first-child {
+        min-width: 110px;
+    }
+
+    table td {
+        vertical-align: middle;
+    }
+
+    .pro-img {
+        margin: auto;
     }
 }
 
